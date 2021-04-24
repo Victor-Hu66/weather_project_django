@@ -8,6 +8,13 @@
 </head>
 <body>
     <h1>weather app</h1>
+    {%if messages%}
+    
+    {% for message in messages  %}
+    {{message}}
+        
+    {% endfor %}
+    {%endif%}    
     <!-- {{city}} <br>
     {{temp}} <br> 
     {{description}} <br>
