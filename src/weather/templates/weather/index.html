@@ -12,8 +12,12 @@
     {{temp}} <br> 
     {{description}} <br>
     {{icon}} <br> -->
-
-    
+    <form action="" method="POST">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit">Add</button>
+    </form>
+    <br>
     {% for i in city_data  %}
         {{i.city}} <br>
         <img src="http://openweathermap.org/img/w/{{ i.icon  }}.png" alt="Image"> <br>
